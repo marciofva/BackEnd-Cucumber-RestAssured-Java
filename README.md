@@ -46,3 +46,16 @@ Testing a simple response containing some JSON data.
 ## JSON schema validator
 - Th main goal is to ensure that the JSON format is correct as well as all data inside him. Therefore, it was created a json file (schema) and stored it in "resource" file in the package project. In the source-code is validated by the statement 'body(matchesJsonSchemaInClasspath("schema-json.json"))';
 
+# How it is done
+#### Passing a CEP by parameter and calling GET request
+- when().get("/" + cep)
+
+#### Print in console the response
+- then().log().all();
+
+#### Check the status code, so the expected status is passed by parameter in feature file
+- then().statusCode(Integer.parseInt(statusCode));
+
+#### Check body response - In this case, the required format is JSON
+- then().assertThat().contentType(ContentType.JSON).and().body(matchesJsonSchemaInClasspath("schema-json.json"));
+
