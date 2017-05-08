@@ -12,10 +12,11 @@ BDD requires a feature file to invoke the step definitions:
 
 ## REST API 
 In order to test REST APIs, I found REST Assured library so useful:
+- First, I performed the manual tests using POSTMAN plugin in chrome browser.
 - This project is aimed at calling Correios' API to validate the CEP. This is written in a feature file using Cucumber.
 - Each line of the scenario would tie to backend code that actually executes the line (step).
 
-# Verify JSON GET Request
+## Verify JSON GET Request
 
 Testing a simple response containing some JSON data.
 
@@ -31,5 +32,17 @@ Testing a simple response containing some JSON data.
   "cidade": "Campinas",
   "estado": "SP"
 }
+- Status Code: 200 OK
 
+## Resquet not found 
+- Request URL: http://correiosapi.apphb.com/cep/12345678
+- Request Method: GET
+- Response Body:
+{
+  "message": "Endereço não encontrado!"
+}
+- Status Code: 404 Not Found
+
+## JSON schema validator
+- In order to ensure that JSON format is right as well as all data inside him. Therefore, it was created a json file (schema) and stored in "resource" file. It is validated by the statement 'body(matchesJsonSchemaInClasspath("schema-json.json"))';
 
