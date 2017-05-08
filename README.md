@@ -46,7 +46,7 @@ Testing a simple response containing some JSON data.
 ## JSON schema validation
 - Th main goal is to ensure that the JSON format is correct as well as all data inside him. Therefore, it was created a json file (schema) and stored it in "resource" file in the package project. In the source-code is validated by the statement 'body(matchesJsonSchemaInClasspath("schema-json.json"))';
 
-# How it is done
+## How it is done (source-code)
 #### Passing a CEP by parameter in feature file and calling GET request
 - when().get("/" + cep)
 
