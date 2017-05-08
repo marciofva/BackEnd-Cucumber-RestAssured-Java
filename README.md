@@ -43,7 +43,7 @@ Testing a simple response containing some JSON data.
 }
 - Status Code: 404 Not Found
 
-## JSON schema validator
+## JSON schema validation
 - Th main goal is to ensure that the JSON format is correct as well as all data inside him. Therefore, it was created a json file (schema) and stored it in "resource" file in the package project. In the source-code is validated by the statement 'body(matchesJsonSchemaInClasspath("schema-json.json"))';
 
 # How it is done
