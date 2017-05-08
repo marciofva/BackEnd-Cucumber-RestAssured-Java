@@ -14,7 +14,7 @@ BDD requires a feature file to invoke the step definitions:
 In order to test REST APIs, I found REST Assured library so useful:
 - First, I performed the manual tests using POSTMAN plugin in chrome browser.
 - This project is aimed at calling Correios' API to validate the CEP. This is written in a feature file using Cucumber.
-- Each line of the scenario would tie to backend code that actually executes the line (step).
+- Each line of the scenario is tied to backend code that actually executes the line (step).
 
 ## Verify JSON GET Request
 
